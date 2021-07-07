@@ -1,0 +1,51 @@
+body {
+    margin: 10px auto;
+    min-width: 250px;
+    max-width: 50%;
+    background-color: rgb(201, 244, 247);
+}
+
+/* providing the box around the add button */
+.header{
+    background-color: rgb(60, 47, 240);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 15px 40px;
+    /* removes bullet pointss */
+    list-style-type: none;
+    background: rgb(225, 228, 84);
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+
+#ul:hover {
+    background-color: blue;
+    color:white;
+} 
+/* adding background color to clear all button */
+#clear-button {
+    width: 30%;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    margin: 40px 35%;
+    background-color: rgb(139, 0, 0);
+    color: white;
+}
+#clear-button:hover {
+    background-color: blue;
+    color:white;
+} 
+
