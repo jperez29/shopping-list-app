@@ -34,4 +34,3 @@ def list_view(request):
         # if form.is_valid():
         #     return HttpResponse(f"<h1>{form.cleaned_data['content']}</h1>") 
     return render(request, 'shopping_list.html', context = {'total_items': total_items, 'form': form})
-

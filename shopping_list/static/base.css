@@ -2,12 +2,12 @@ body {
     margin: 10px auto;
     min-width: 250px;
     max-width: 50%;
-    background-color: rgb(201, 244, 247);
+    background-color: rgb(227, 250, 252);
 }
 
 /* providing the box around the add button */
 .header{
-    background-color: rgb(60, 47, 240);
+    background-color: rgb(19, 46, 167);
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@ ul li {
     padding: 12px 8px 15px 40px;
     /* removes bullet pointss */
     list-style-type: none;
-    background: rgb(225, 228, 84);
+    background: rgb(136, 231, 219);
     font-size: 18px;
     transition: 0.2s;
 }
@@ -41,11 +41,11 @@ ul li {
     font-style: italic;
     font-size: x-large;
     margin: 40px 35%;
-    background-color: rgb(139, 0, 0);
+    background-color: rgb(14, 30, 175);
     color: white;
 }
 #clear-button:hover {
-    background-color: blue;
+    background-color: rgb(63, 175, 179);
     color:white;
 } 
 
