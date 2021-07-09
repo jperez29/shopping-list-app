@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.list_view),
     #providing the path that handles the post request
-    path("addListItem/", views.addListView),
+    # path("addListItem/", views.addListView),
     path("deleteListItem/<int:i>/", views.deleteItems),
     path('deleteAll/', views.deleteAll),
     path('admin/', admin.site.urls),

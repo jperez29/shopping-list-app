@@ -8,7 +8,7 @@ from .models import ItemList
 
 # creating a form directly from the model that I built
 
-class PostForm(forms.Form):
+class PostForm(forms.ModelForm):
     #here I am specifying the name of the model that I am using
     class Meta:
         model =  ItemList
