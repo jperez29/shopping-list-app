@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render
 from .models import ItemList
 from .forms import PostForm
@@ -25,13 +25,12 @@ def deleteAll(request):
     return HttpResponseRedirect('/')
 
 def list_view(request):
-    #obtaining all items from ItemList and saving it in a variable called all_items
+    #obtaining all items from ItemList and saving it in a variable called total_items
     total_items = ItemList.objects.all()
-    if request.method == 'GET':
-        form = PostForm()
-    else:
-        form = PostForm(request.POST)
-        # if form.is_valid():
-        #     return HttpResponse(f"<h1>{form.cleaned_data['content']}</h1>") 
-    return render(request, 'shopping_list.html', context = {'total_items': total_items, 'form': form})
+    # if request.method == 'GET':
+    #     form = PostForm()
+    # else:
+    #     form = PostForm(request.POST)
+
+    return render(request, 'shopping_list.html', context = {'total_items': total_items})
 
