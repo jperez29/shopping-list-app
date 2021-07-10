@@ -1,5 +1,5 @@
 from django import forms
-from .models import ItemList
+from .models import ItemList, User
 
 #review the purpose of this method
 # class PostForm(forms.Form):
@@ -12,4 +12,10 @@ class PostForm(forms.ModelForm):
     #here I am specifying the name of the model that I am using
     class Meta:
         model =  ItemList
-        fields = "__all__"
+        fields = ['item']
+        # fields = "__all__"
+
+# class UserForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = '__all__'

@@ -48,3 +48,13 @@ ul li {
     background-color: rgb(63, 175, 179);
     color:white;
 } 
+
+#submit-button{
+    width: 30%;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    margin: 40px 35%;
+    background-color: rgb(14, 30, 175);
+    color: white;
+}

@@ -30,6 +30,7 @@ def list_view(request):
         if form.is_valid():
             form.save()
             total_items = ItemList.objects.all()
+            form = PostForm()
             context = {
                 'form': form,
                 'total_items': total_items
