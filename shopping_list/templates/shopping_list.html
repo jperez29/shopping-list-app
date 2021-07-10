@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load socialaccount %}
 
 {% block content %}
 
@@ -10,13 +11,14 @@
     </form>
 </div> -->
 
-<style>
-    input {max-width: 12em};
-</style>
+
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}</p>
+{% endif %}
 
 <div class = "header">
     <h1>My shopping list</h1> 
-    <form action="/", method='post'>
+    <form action="/items/", method='post'>
         {%csrf_token%}
         {{ form }}
         <!-- <input type="text" name="content"> -->
