@@ -28,7 +28,8 @@ urlpatterns = [
     path("deleteListItem/<int:i>/", views.deleteItems),
     path('deleteAll/', views.deleteAll),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="sign_in.html")),
+    path('', views.home),
+    # path('', TemplateView.as_view(template_name="sign_in.html")),
     path('accounts/', include('allauth.urls')),
     path('logout/', LogoutView.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
