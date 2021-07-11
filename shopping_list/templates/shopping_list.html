@@ -33,17 +33,18 @@
             </form>
 </div>
 
-<div class = "list-items">
-    <ul>
+
+<div id = 'list-items'>
     {% if total_items %}
-        {% for shopping_item in total_items %}
-            {{ shopping_item.item }} <br/>
-            <form action="/deleteListItem/{{shopping_item.id}}/" method = "post">{% csrf_token %}
-                <input type="submit" value="x">
-            </form> 
-        {% endfor %}
+        <ul>
+            {% for shopping_item in total_items %}
+            <li> {{ shopping_item.item }} </li>
+                <form action="/deleteListItem/{{shopping_item.id}}/" method = "post">{% csrf_token %}
+                    <input type="submit" id = 'x-button' value="x">
+                </form> 
+            {% endfor %}
+        </ul>
     {% endif %}
-    </ul>
 </div>
 
 
