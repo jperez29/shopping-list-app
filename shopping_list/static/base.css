@@ -1,16 +1,56 @@
 body {
-    margin: 10px auto;
-    min-width: 250px;
-    max-width: 50%;
-    background-color: rgb(227, 250, 252);
+    /* margin: 10px auto; */
+    /* min-width: 250px;
+    max-width: 100%;
+    background-color: rgb(227, 250, 252); */
+    margin:0;
+    /*background-color:var(--first-color);*/
+    background-image: linear-gradient(rgb(197, 231, 231), rgb(67, 194, 173), rgb(43, 18, 185));
+    padding-top:6rem;
+    display:grid;
+    justify-items:left;
 }
+
+
+.banner{
+    width:100%;
+    display:flex;
+    flex-flow:wrap;
+    align-items:center;
+    list-style-type:none;
+    background-color:rgba(86, 58, 241,.3);
+    position:fixed;
+    top:0;
+    color:var(--third-color);
+    box-shadow:var(--shadow);
+}
+
+a:hover{
+    Color:rgba(87, 238, 119, 0.3);
+}
+
+.banner li {
+    display:inline;
+    margin: 1rem;
+}
+
+
 
 /* providing the box around the add button */
 .header{
-    background-color: rgb(19, 46, 167);
-    padding: 30px 40px;
-    color: white;
+    /* background-color: rgb(19, 46, 167);
+    padding: 10px 10px; */
+    color: rgb(252, 24, 73);
+    width: 30%;
+    length: 30%;
     text-align: center;
+    size: 2px;
+    padding-left: 5rem;
+    display: grid
+}
+.welcome {
+    text-align: left;
+    padding-left: 3rem;
 }
 
 ul {
@@ -22,7 +62,7 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 15px 40px;
-    /* removes bullet pointss */
+    /* removes bullet points */
     list-style-type: none;
     background: rgb(136, 231, 219);
     font-size: 18px;
@@ -57,4 +97,12 @@ ul li {
     margin: 40px 35%;
     background-color: rgb(14, 30, 175);
     color: white;
+}
+
+
+.list {
+    display:flex;
+}
+.list-item {
+    
 }
