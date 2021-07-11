@@ -54,7 +54,7 @@ a:hover{
 
 ul {
     margin: 0;
-    padding-left:4rem
+    padding-left:12rem
 }
 
  ul li {
@@ -67,9 +67,10 @@ ul {
     font-size: 18px;
     transition: 0.2s;
     width: 500px;
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     font-size: x-large;
+    color:antiquewhite;
 }
 
 /* ul li:nth-child(odd) {
@@ -86,7 +87,7 @@ ul {
     font-weight: bold;
     font-style: italic;
     font-size: x-large;
-    margin: 40px 35%;
+    margin: 10px 35%;
     background-color: rgb(65, 36, 170);
     color: white;
     /* position: relative; */
@@ -118,8 +119,21 @@ ul {
 
 .list {
     display:flex;
+    padding-bottom: 50px;
 }
 
-.list-items {
+/* .list-items {
     display: flexbox;
-}
+} */
+
+#wrapper {
+    display: flex;
+  }
+  
+  #left {
+    flex: 0 0 65%;
+  }
+  
+  #x-button {
+    flex: 1;
+  }

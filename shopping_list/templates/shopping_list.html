@@ -34,11 +34,13 @@
 </div>
 
 
-<div id = 'list-items'>
+<div id = 'wrapper'>
     {% if total_items %}
         <ul>
             {% for shopping_item in total_items %}
-            <li> {{ shopping_item.item }} </li>
+            <div id = 'left'>
+                <li> {{ shopping_item.item }} </li>
+            </div>
                 <form action="/deleteListItem/{{shopping_item.id}}/" method = "post">{% csrf_token %}
                     <input type="submit" id = 'x-button' value="x">
                 </form> 
