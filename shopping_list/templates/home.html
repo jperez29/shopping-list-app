@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block content %}
+
+    <h1>My Shopping List Project </h1>
+    {% if user.is_authenticated %}
+
+        <div class = "banner">
+            <div class ="title">
+                <h1>Shopping List</h1>
+            </div>
+            <div class="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/logout/">logout</a></li>
+                    </ul>
+            </div>
+        </div>
+
+        <p>Welcome, {{ user.first_name}}!</p>
+                <div class="shopping-pic-1">
+                    <img src= "static/images/shopping1.jpg" width="400px" length="700px"/>
+                </div>
+                <div class="shopping-pic-2">
+                    <img src= "static/images/shopping2.jpg" width="500px" length="700px"/>
+                </div>
+                <a href="items">Check out your shopping list</a>
+           
+
+    {% else %}
+        <a href="{% provider_login_url 'google' %}">Login With Google</a> 
+    {% endif %}
+
+
+{% endblock content %}

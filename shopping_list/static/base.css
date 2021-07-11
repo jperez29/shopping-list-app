@@ -1,51 +1,142 @@
 body {
-    margin: 10px auto;
-    min-width: 250px;
-    max-width: 50%;
-    background-color: rgb(227, 250, 252);
+    background: rgb(158, 156, 156);
+    padding-top:2rem;
+    justify-items:right;
+    margin-right: 10;
 }
 
-/* providing the box around the add button */
+p {
+    padding-left:20px;
+    font-size:x-large;
+}
+
+h1 {
+    justify-content: right;
+}
+
+.banner{
+    width:100%;
+    display:flex;
+    align-items:center;
+    background-color:teal;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    justify-content: center;
+}
+
+.banner li {
+    display:inline;
+    margin: 1rem;
+}
+
+/* provides padding for items in the home page */
+.container{
+    padding: 45px;
+}
+
+a {
+    font-size:large;
+}
+
+
+a:hover{
+    Color:rgba(43, 71, 197, 0.3);
+} 
+
+
 .header{
-    background-color: rgb(19, 46, 167);
-    padding: 30px 40px;
-    color: white;
+    padding: 10px 10px; 
+    color: rgb(244, 245, 248);
+    width: 30%;
     text-align: center;
+    size: 2px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: grid;
+}
+
+.welcome {
+    text-align: left;
+    padding-left: 3rem;
+}
+
+
+input[type=submit] { 
+    background-color: teal; 
+    color: white; 
+    padding: 10px;
+    border-radius: 8px; 
 }
 
 ul {
     margin: 0;
-    padding: 0;
+    padding-left:12rem
 }
 
-ul li {
+ ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 15px 40px;
-    /* removes bullet pointss */
-    list-style-type: none;
-    background: rgb(136, 231, 219);
+    /* removes bullet points */
+    list-style-type: none; 
+    background:  teal;
     font-size: 18px;
     transition: 0.2s;
+    width: 600px;
+    padding: 5px;
+    margin: 0;
+    font-size: large;
+    color:rgb(10, 10, 9);
+    display: flex;
+    justify-content: space-between;
+
 }
 
+.wrapper ul li:nth-child(odd) {
+    background: #f9f9f9;
+} 
 
-#ul:hover {
-    background-color: blue;
+ul li:hover {
+    background-color:silver;
+    color:white;
+}   
+
+ul li:nth-child(odd):hover {
+    background: silver;
+    color: black;
+} 
+
+
+#x-button:hover {
+    background-color: rgb(63, 175, 179);
     color:white;
 } 
-/* adding background color to clear all button */
+
+/* adding background color to clear-all button */
 #clear-button {
     width: 30%;
     font-weight: bold;
     font-style: italic;
     font-size: x-large;
     margin: 40px 35%;
-    background-color: rgb(14, 30, 175);
+    background-color: teal;
     color: white;
 }
+
 #clear-button:hover {
     background-color: rgb(63, 175, 179);
     color:white;
 } 
 
+.shopping-pic-1{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+.shopping-pic-2::after {
+    content: "";
+    clear: both;
+    display: flex;
+  }

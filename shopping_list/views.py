@@ -1,34 +1,49 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
+from collections import UserDict
 from django.shortcuts import render
 from .models import ItemList
 from .forms import PostForm
 from django.http import HttpResponseRedirect 
-
-#handling the post request, making sure we're saving data to database
-def addListView(request):
-    shopping_item = request.POST['content']
-    new_shopping_item = ItemList(item = shopping_item)
-    new_shopping_item.save()
-    #redirecting it to the main path 
-    return HttpResponseRedirect('/')
+from django.contrib.auth.models import User
 
 #adding method to delete item
 def deleteItems(request, i):
     #deleting by the id, using i as a primary key to identify each item in shopping list
     item_lst = ItemList.objects.get(id = i)
     item_lst.delete()
-    return HttpResponseRedirect('/') 
+    return HttpResponseRedirect('/items/') 
     
 #deleting all items in list
 def deleteAll(request):
     ItemList.objects.all().delete()
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/items/')
 
 def list_view(request):
-    #obtaining all items from ItemList and saving it in a variable called all_items
-    total_items = ItemList.objects.all()
-    if request.method == 'GET':
-        form = PostForm()
-    else:
+    if request.method == 'POST':
         form = PostForm(request.POST)
-    return render(request, 'shopping_list.html', context = {'total_items': total_items, 'form': form})
+        if form.is_valid():
+            form.save()
+            total_items = ItemList.objects.all()
+            #rendering a form so that the user can submit new items to list
+            form = PostForm()
+            context = {
+                'form': form,
+                'total_items': total_items
+            }
+            return render(request, 'shopping_list.html', context)
+    else:
+        '''if request is "GET", then sending a form to user along with previous 
+        submitted items in shopping list'''
+        form = PostForm()
+        total_items = ItemList.objects.all()
+        context = {
+            'form': form,
+            'total_items': total_items
+        }
+        return render(request, 'shopping_list.html', context)
+
+
+def home(request):
+    #showing users the homepage 
+    return render(request, 'home.html')
+
