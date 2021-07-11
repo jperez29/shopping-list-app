@@ -14,40 +14,38 @@
             </u1>
     </div>
 </div>
+    <div class = 'container'>
+        <div class= "welcome">
+        {% if user.is_authenticated %}
+            <h1>Welcome, {{ user.first_name}}!</h1>
+        {% endif %}
+        </div>
 
-<div class= "welcome">
-{% if user.is_authenticated %}
-    <h1>Welcome, {{ user.first_name}}!</h1>
-{% endif %}
-</div>
-
-<div class="list">
-    <div class = "header">
-            <h2>Add any item to your shopping list:</h2> 
-    </div>
-            <form action="/items/", method='post'>
-                {%csrf_token%}
-                {{ form }}
-                <!-- <input type="text" name="content"> -->
-                <input type='submit' value='Add to list'>
-            </form>
-</div>
-
-
-<div id = 'wrapper'>
-    {% if total_items %}
-        <ul>
-            {% for shopping_item in total_items %}
-            <div id = 'left'>
-                <li> {{ shopping_item.item }} </li>
+        <div class="list">
+            <div class = "header">
+                    <h2>Add any item to your shopping list:</h2> 
             </div>
-                <form action="/deleteListItem/{{shopping_item.id}}/" method = "post">{% csrf_token %}
-                    <input type="submit" id = 'x-button' value="x">
-                </form> 
-            {% endfor %}
-        </ul>
-    {% endif %}
-</div>
+                    <form action="/items/", method='post'>
+                        {%csrf_token%}
+                        {{ form }}
+                        <!-- <input type="text" name="content"> -->
+                        <input type='submit' value='Add to list'>
+                    </form>
+        </div>
+        <div class = 'wrapper'>
+            {% if total_items %}
+                <ul>
+                    {% for shopping_item in total_items %}
+                        <li> {{ shopping_item.item }}                  
+                            <form action="/deleteListItem/{{shopping_item.id}}/" method = "post">{% csrf_token %}
+                                <input type="submit" id = 'x-button' value="x">
+                            </form> 
+                        </li> 
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
 
 
 <!-- delete all items -->
