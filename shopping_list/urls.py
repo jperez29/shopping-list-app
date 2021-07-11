@@ -23,13 +23,10 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('items/', views.list_view),
-    #providing the path that handles the post request
-    # path("addListItem/", views.addListView),
     path("deleteListItem/<int:i>/", views.deleteItems),
     path('deleteAll/', views.deleteAll),
     path('admin/', admin.site.urls),
     path('', views.home),
-    # path('', TemplateView.as_view(template_name="sign_in.html")),
     path('accounts/', include('allauth.urls')),
     path('logout/', LogoutView.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

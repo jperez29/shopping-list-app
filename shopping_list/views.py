@@ -22,16 +22,9 @@ def list_view(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
-            # form.save()
-            fs= form.save()
-            fs.user= request.user
-            fs.save()
-            # users = User.objects.all() 
-            # current_user = request.user
-            # print(f"printing current id {fs.user.id}")
-            #Choices are: id, item, user, user_id
+            form.save()
             total_items = ItemList.objects.all()
-            print(total_items)
+            #rendering a form so that the user can submit new items to list
             form = PostForm()
             context = {
                 'form': form,
@@ -39,10 +32,10 @@ def list_view(request):
             }
             return render(request, 'shopping_list.html', context)
     else:
+        '''if request is "GET", then sending a form to user along with previous 
+        submitted items in shopping list'''
         form = PostForm()
         total_items = ItemList.objects.all()
-        current_user = request.user
-        print(f"printing current id {current_user.id}")
         context = {
             'form': form,
             'total_items': total_items
@@ -51,6 +44,6 @@ def list_view(request):
 
 
 def home(request):
-    print('rendering to home now')
+    #showing users the homepage 
     return render(request, 'home.html')
 
