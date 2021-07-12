@@ -1,5 +1,5 @@
-<div align="left"><img src="/shopping_list/static/images/images/homepage.jpg"></div>
-<div align="right"><img src="/shopping_list/static/images/images/shopping_list.jpg"></div>
+<div align="left"><img src="./shopping_list/static/images/images/homepage.jpg"></div>
+<div align="right"><img src="./shopping_list/static/images/images/shopping_list.jpg"></div>
 
 # Shopping List Project
 
