@@ -30,8 +30,9 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shopping-list-google-project.herokuapp.com']
+# ALLOWED_HOSTS = ['shopping-list-google-project.herokuapp.com']
 
+ALLOWED_HOSTS = ['https://shopping-list-google-project.herokuapp.com' , 'localhost’, ‘127.0.0.1']
 
 # Application definition
 
