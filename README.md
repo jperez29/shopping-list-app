@@ -1,4 +1,4 @@
-<div align="left"><img src="./shopping_list/static/images/images/homepage.PNG"></div>
+<div align="left"><img src="./img/homepage.PNG"></div>
 <!-- <div align="right"><img src="./shopping_list/static/images/images/shopping_list.PNG"></div> -->
 
 # Shopping List Project
