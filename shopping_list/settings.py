@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 # from dotenv import load_dotenv
 
 # load_dotenv()
@@ -26,7 +27,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -61,7 +62,6 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
-
 
 
 MIDDLEWARE = [
@@ -165,3 +165,6 @@ SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+#to activate django_heroku
+django_heroku.settings(locals())
