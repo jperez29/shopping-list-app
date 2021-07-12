@@ -1,5 +1,5 @@
-<div align="left"><img src="shopping_list/static/images/images/homepage.jpg"></div>
-<div align="right"><img src="shopping_list/static/images/images/shopping_list.jpg"></div>
+<div align="left"><img src="/shopping_list/static/images/images/homepage.jpg"></div>
+<div align="right"><img src="/shopping_list/static/images/images/shopping_list.jpg"></div>
 
 # Shopping List Project
 
@@ -16,7 +16,7 @@ The aim of this project was to create a shopping list where users can:
 I used python as the primary programming language because of its rich palette of tools. Some of the additional tools I used are
 | Library | Description |
 | --- | --- |
-| [django]https://www.djangoproject.com/) | Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design |
+| [django](https://www.djangoproject.com/) | Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design |
 | [Google Oauth](https://developers.google.com/identity/sign-in/web/sign-in) | OAuth is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords. |
 | [Sqlite3](https://www.sqlite.org/index.html) | Sqlite3 is a C library that provides a lightweight disk-based database that allows accessing the database using a nonstandard variant of the SQL query language. |
 
